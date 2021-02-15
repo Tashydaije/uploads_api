@@ -1,0 +1,1 @@
+json.message 'Your file has been deleted'
