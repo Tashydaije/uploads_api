@@ -1,6 +1,6 @@
 class UploadsController < ApplicationController
   require 'base64'
-  before_action :authenticate_user!
+  before_action :authorize_request, except: :create
   before_action :set_upload, only: [:show, :destroy]
 
   # GET /uploads
@@ -22,13 +22,14 @@ class UploadsController < ApplicationController
 
   # POST /uploads
   def create
-    file_name = params[:upload][:file]
-    incoming_file = params[:upload][:binary]
+    
+    file_name = params[:file]
+
+    #uUpload.create!(upload_params)
     uri = "#{Rails.root}/uploads/#{file_name}"
-    FileUtils.cp_r incoming_file, uri
-
-    @upload = Upload.new(user_id: current_user.id, filename: file_name, uri: uri)
-
+   
+    @upload = Upload.new(upload_params)
+    
     if @upload.save
       render json: @upload, status: :created, location: @upload
     else
@@ -51,7 +52,7 @@ class UploadsController < ApplicationController
 
   private
     # checks if current upload exists by its id
-    def upload_exists?(id) #:doc:
+    def upload_exists?(id)                  #:doc:
       Upload.exists?(id: id)
     end
 
@@ -62,6 +63,6 @@ class UploadsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def upload_params
-      params.require(:upload).permit(:file, :binary)
+      params.permit(:file, :user_id)
     end
 end

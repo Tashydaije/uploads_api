@@ -1,0 +1,209 @@
+{
+	"id": "fb48b216-afc6-a400-a7f7-65698aad0f66",
+	"name": "upload-api",
+	"description": "",
+	"order": [
+		"287b606a-008e-09fb-0a7c-1bf3fd284ac2",
+		"3a2e0c80-40d6-c35a-f7f5-e2936223c29d",
+		"32f11e6e-2915-8721-fcce-5910f0fc72dc",
+		"af78df47-caaa-ffaa-754b-446fac7cd428",
+		"13e11ce6-a4bb-7731-9caa-40d25d747ba8"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1573389081133,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "13e11ce6-a4bb-7731-9caa-40d25d747ba8",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczOTM3MDQ4LCJleHAiOjE1NzM5Mzc5NDgsImp0aSI6IjA2NDI0M2NiLTljN2YtNDU2NS04ZDZmLTVhNDQwMWMwZTM5MCJ9.ribtb0ZI2YXHF9USQV9TBtuhpkeHcyAfUY9Om_-KXko\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczOTM3MDQ4LCJleHAiOjE1NzM5Mzc5NDgsImp0aSI6IjA2NDI0M2NiLTljN2YtNDU2NS04ZDZmLTVhNDQwMWMwZTM5MCJ9.ribtb0ZI2YXHF9USQV9TBtuhpkeHcyAfUY9Om_-KXko",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/uploads/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1573937192352,
+			"name": "DeleteFile",
+			"description": "",
+			"collectionId": "fb48b216-afc6-a400-a7f7-65698aad0f66",
+			"responses": []
+		},
+		{
+			"id": "287b606a-008e-09fb-0a7c-1bf3fd284ac2",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/signup",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "user[email]",
+					"value": "testing3@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[password]",
+					"value": "testpass111111",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1573937178226,
+			"name": "SignUp",
+			"description": "",
+			"collectionId": "fb48b216-afc6-a400-a7f7-65698aad0f66",
+			"responses": []
+		},
+		{
+			"id": "32f11e6e-2915-8721-fcce-5910f0fc72dc",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczOTM3MDQ4LCJleHAiOjE1NzM5Mzc5NDgsImp0aSI6IjA2NDI0M2NiLTljN2YtNDU2NS04ZDZmLTVhNDQwMWMwZTM5MCJ9.ribtb0ZI2YXHF9USQV9TBtuhpkeHcyAfUY9Om_-KXko\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczOTM3MDQ4LCJleHAiOjE1NzM5Mzc5NDgsImp0aSI6IjA2NDI0M2NiLTljN2YtNDU2NS04ZDZmLTVhNDQwMWMwZTM5MCJ9.ribtb0ZI2YXHF9USQV9TBtuhpkeHcyAfUY9Om_-KXko",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/uploads",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "upload[binary]",
+					"value": "FrancescaMicallefCV_Updated.pdf",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				},
+				{
+					"key": "upload[file]",
+					"value": "cv.pdf",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1573937193157,
+			"name": "UploadFiles",
+			"description": "",
+			"collectionId": "fb48b216-afc6-a400-a7f7-65698aad0f66",
+			"responses": []
+		},
+		{
+			"id": "3a2e0c80-40d6-c35a-f7f5-e2936223c29d",
+			"headers": "//user[email]: shh@gmail.com\n//user[password]: 123443545463\n",
+			"headerData": [
+				{
+					"key": "user[email]",
+					"value": "shh@gmail.com",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "user[password]",
+					"value": "123443545463",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "localhost:3000/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "user[email]",
+					"value": "testing3@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[password]",
+					"value": "testpass111111",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1573813291244,
+			"name": "SignIn",
+			"description": "",
+			"collectionId": "fb48b216-afc6-a400-a7f7-65698aad0f66",
+			"responses": []
+		},
+		{
+			"id": "af78df47-caaa-ffaa-754b-446fac7cd428",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczOTM3MDQ4LCJleHAiOjE1NzM5Mzc5NDgsImp0aSI6IjA2NDI0M2NiLTljN2YtNDU2NS04ZDZmLTVhNDQwMWMwZTM5MCJ9.ribtb0ZI2YXHF9USQV9TBtuhpkeHcyAfUY9Om_-KXko\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczOTM3MDQ4LCJleHAiOjE1NzM5Mzc5NDgsImp0aSI6IjA2NDI0M2NiLTljN2YtNDU2NS04ZDZmLTVhNDQwMWMwZTM5MCJ9.ribtb0ZI2YXHF9USQV9TBtuhpkeHcyAfUY9Om_-KXko",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/uploads/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1573937191248,
+			"name": "GetUploads",
+			"description": "",
+			"collectionId": "fb48b216-afc6-a400-a7f7-65698aad0f66",
+			"responses": []
+		}
+	]
+}
