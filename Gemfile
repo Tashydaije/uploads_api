@@ -17,6 +17,7 @@ gem 'rack-cors'
 #gem 'carrierwave-base64'
 gem 'rdoc'
 gem 'pry'
+gem 'figaro'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'

@@ -22,7 +22,6 @@ class UploadsController < ApplicationController
 
   # POST /uploads
   def create
-    
     file_name = params[:file]
 
     #uUpload.create!(upload_params)
